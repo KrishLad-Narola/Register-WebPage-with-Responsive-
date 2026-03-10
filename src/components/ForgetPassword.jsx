@@ -16,6 +16,7 @@ const ForgotPassword = () => {
 
 
   const generateOTP = () => {
+
     const otp = Math.floor(100000 + Math.random() * 900000);
     setGeneratedOTP(otp);
     console.log("Generated OTP:", otp);
@@ -64,7 +65,7 @@ const ForgotPassword = () => {
       {!otpSent ? (
         <button
           type="button"
-          onClick={generateOTP}
+          onClick={handleSubmit(generateOTP)}
           className="mt-2 mb-2 p-4 justify-center block mx-auto bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
         >
           Send OTP
