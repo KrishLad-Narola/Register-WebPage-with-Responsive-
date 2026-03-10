@@ -18,9 +18,11 @@ function Header() {
 
                     <div className="Logo">
                         <NavLink to="/">
-                            <h1 className='text-shadow-amber-200 text-4xl'>THE FORM</h1>
+                            <h1 className='text-shadow-amber-200  text-blue-600 text-4xl'>THE FORM</h1>
                         </NavLink>
+                  
                     </div>
+
 
                     <nav >
                         <ul className='flex gap-5 w-full justify-end p-5 bg-gray-600 text-white'>

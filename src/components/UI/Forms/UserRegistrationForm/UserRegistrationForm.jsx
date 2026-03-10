@@ -16,7 +16,7 @@ const UserRegistrationForm = () => {
   console.log('errors', errors)
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h1 className='text-center bg-amber-200 '>Create Account</h1>
+      <h1 className='text-center bg-amber-200'>Create Account</h1>
 
       <UserInfoSection register={register} errors={errors} />
 
@@ -38,6 +38,8 @@ const UserRegistrationForm = () => {
       <div className="text-center">
         <button type="submit" className="mt-2 mb-2 p-4 justify-center block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
       </div>
+
+
 
       <div className="p-10 mx-auto text-purple-600">
         <Link to="/Home">

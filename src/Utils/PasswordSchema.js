@@ -1,5 +1,12 @@
 import { z } from "zod";
 
-export const ForgotPasswordSchema = z.object({
-  email: z.string().min(1, { message: "Email is required" }).email({ message: "Must be a valid email" }),
-});
+export const forgotPasswordSchema = z
+  .object({
+   
+    password: passwordSchema,
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: 'Passwords do not match',
+    path: ['confirmPassword'], 
+  });

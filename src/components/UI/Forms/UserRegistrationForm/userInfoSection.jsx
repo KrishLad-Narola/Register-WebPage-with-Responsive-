@@ -50,7 +50,7 @@ const UserInfoSection = ({ register, errors }) => (
     />
 
     <br />
-
+            
      </section>
 );
 

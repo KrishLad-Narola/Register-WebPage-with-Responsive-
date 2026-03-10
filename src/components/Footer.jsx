@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-auto">
 
-      <div className="flex max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
 
         {footerContact.map((curData, index) => {
           const { icon, title, details } = curData;
@@ -46,12 +46,13 @@ const Footer = () => {
 
         <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} All Rights Reserved by{" "}
-          <NavLink
-            to="/"
+          <a target="_blank" href="https://app.netlify.com/teams/krishlad334/projects"
+           
             className="text-indigo-400 hover:text-indigo-300 font-medium"
           >
-            KrishCodes
-          </NavLink>
+            NextGen Devs
+
+          </a>
         </p>
 
         <ul className="flex gap-6 text-sm">
@@ -62,9 +63,9 @@ const Footer = () => {
           </li>
 
           <li>
-            <NavLink to="/" className="hover:text-white transition">
+            <a target="_blank" href="https://github.com/KrishLad-Narola/Register-WebPage-with-Responsive-"  className="hover:text-white transition">
               Source Code
-            </NavLink>
+            </a>
           </li>
 
           <li>

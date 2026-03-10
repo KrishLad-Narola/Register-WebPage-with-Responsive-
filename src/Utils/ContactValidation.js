@@ -7,7 +7,4 @@ export const UserContactSchema = z.object({
   Mobilenumber:z.string().min(10 ,'Enter a valid MobileNumber'),
   FeedBack: z .string() .min(8, { message: "FeedBack is mendetry " })
  
-  // password: z.string().min(8, { message: "Password must be at least 8 characters long" }),
-  // currectpassword: z.string() .max(32, { message: "write a currect password" })
-
-  });
+});

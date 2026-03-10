@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { userRegistrationSchema } from '../Utils/ValidationSchems'
+import { ForgotPasswordSchema } from '../Utils/PasswordSchema'
 
 
-const useUserForm = () => {
+const useLoginForm = () => {
   const {
     register,
     handleSubmit,
@@ -12,19 +12,13 @@ const useUserForm = () => {
     watch,
     reset,
   } = useForm({
-    resolver: zodResolver(userRegistrationSchema), 
+    resolver: zodResolver(ForgotPasswordSchema), 
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      address: '',
-      password:'',
-      currectpassword:''
-
+      email: ''
     },
   });
 
   return { register, handleSubmit, errors, control, watch, reset };
 };
 
-export default useUserForm;
+export default useLoginForm;

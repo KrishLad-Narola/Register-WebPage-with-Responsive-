@@ -2,17 +2,17 @@
 [
   {
     "icon": "MdPlace",
-    "title": "Find us",
+    "title": "Find in",
     "details": "Navsari, Gujarat"
   },
   {
     "icon": "IoCallSharp",
-    "title": "Call us",
+    "title": "Call on",
     "details": "9408982003"
   },
   {
     "icon": "TbMailPlus",
-    "title": "Mail us",
+    "title": "Mail on",
     "details": "krishlad334@gamil.com"
   }
 ]

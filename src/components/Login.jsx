@@ -1,34 +1,62 @@
-import React from 'react'
-import Input from './UI/Input'
-import { email } from 'zod'
+import React, { useState } from "react";
+import Input from "./UI/Input";
 
 function Login() {
-    return (
-        <div className=' mt-4 gap-2 text-center'>
-            <div className="container grid grid-two-cols">
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-                <Input
-                    label="Email"
-                    type="Email"
-                    placeholder="Email"
-                    required
-                />
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-                <Input
-                    label="password"
-                    type="password"
-                    placeholder="password"
-                    required
-                />
-            </div>
-             <div>
-                <button onClick={(e) => {email.target.value}} type='LogIn' className=' flex p-4  mt-3 gap-5  mx-auto max-w-sm  items-center gap-x-4 rounded-xl bg-blue-800  shadow-lg outline outline-white border-black text-white'>
-                    LogIn
-                </button>
-             </div>
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-        </div>
-    )
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Saved Data:", formData);
+    alert("Data saved in localStorage");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-4 gap-2 text-center">
+      <div className="container grid grid-two-cols">
+
+        <Input
+          label="Email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <Input
+          label="Password"
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+
+      </div>
+
+      <button
+        type="submit"
+        className="mt-2 mb-2 p-4 justify-center block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Log In
+      </button>
+    </form>
+  );
 }
 
-export default Login
+export default Login;

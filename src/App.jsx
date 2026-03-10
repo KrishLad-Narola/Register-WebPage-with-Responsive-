@@ -10,6 +10,7 @@ import About from './Pages/About'
 import {Home} from './Pages/Home'
 import Login from './components/Login'
 import { useForm } from 'react-hook-form'
+import ForgotPassword from './components/ForgetPassword'
 
 
 
@@ -26,7 +27,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact register={register} errors={errors} />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/Login" element={<Login />} />     
+          <Route path="/Login" element={<Login />} />   
+          <Route path="/ForgotPassword" element={<ForgotPassword register={register} errors={errors}  />} />  
         </Route>
       </Routes>
     </Router>
